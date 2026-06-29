@@ -1,11 +1,8 @@
 """
-app.py
+Contact: arkadipbasu.github.io
 ------
 Streamlit dashboard: Indian Indices -- Signal-Weighted Market Outlook.
-
 Run locally:   streamlit run app.py
-Deploy:        push this repo to GitHub, point Streamlit Community Cloud
-               at app.py (see README.md for full steps).
 """
 
 from __future__ import annotations
@@ -79,6 +76,7 @@ def get_prev_close(display_name: str, nse_row, yf_hist) -> float | None:
 
 with st.sidebar:
     st.title("⚙️ Controls")
+    st.subheader("arkadipbasu.github.io")
     if st.button("🔄 Refresh all data now", use_container_width=True):
         st.cache_data.clear()
         log_event("INFO", "manual_refresh_triggered")
